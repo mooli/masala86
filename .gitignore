@@ -11,3 +11,8 @@
 *.lai
 *.la
 *.a
+*.map
+masala86
+kernel.bin
+*.bo
+*.d

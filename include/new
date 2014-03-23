@@ -1,0 +1,28 @@
+// -*- mode: c++ -*-
+/**
+   \brief C++ new
+   \file
+
+*/
+
+#ifndef _NEW
+#define _NEW
+
+#include <stddef.h>
+
+// Note these aren't in a namespace
+
+// /// Allocates memory for an object
+// void *operator new(size_t) throw();
+// /// Allocates memory for an array
+// void *operator new[](size_t) throw();
+// /// Releases the memory occupied by an object
+// void operator delete(void *) throw();
+// /// Releases the memory occupied by an array
+// void operator delete[](void *) throw();
+/// Allocates an object at a specific address
+inline void *operator new(size_t, void *place) throw() { return place; }
+/// Allocates an array at a specific address
+inline void *operator new[](size_t, void *place) throw() { return place; }
+
+#endif
